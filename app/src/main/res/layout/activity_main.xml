@@ -17,57 +17,59 @@
         app:srcCompat="@drawable/logo" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/rerB"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_marginEnd="32dp"
         android:background="@drawable/rerb"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/rerA"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/rerA"
         app:srcCompat="@drawable/rerb" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/rerC"
         android:layout_width="115dp"
         android:layout_height="115dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rerc"
         android:scaleType="centerInside"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toStartOf="@+id/rerB"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/rerA"
+        app:layout_constraintTop_toBottomOf="@+id/rerA"
         app:srcCompat="@drawable/rerc" />
 
     <ImageButton
-        android:id="@+id/imageButton6"
+        android:id="@+id/rerE"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:background="@drawable/rere"
         android:scaleType="centerInside"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton5"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toTopOf="@+id/imageButton5"
+        app:layout_constraintBottom_toBottomOf="@+id/rerD"
+        app:layout_constraintEnd_toEndOf="@+id/rerB"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rerB"
+        app:layout_constraintTop_toTopOf="@+id/rerD"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/rere" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/rerD"
         android:layout_width="115dp"
         android:layout_height="115dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/rerd"
         android:scaleType="centerInside"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3"
+        app:layout_constraintEnd_toEndOf="@+id/rerA"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/rerA"
+        app:layout_constraintTop_toBottomOf="@+id/rerC"
         app:srcCompat="@drawable/rerd" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/rerA"
         android:layout_width="115dp"
         android:layout_height="115dp"
         android:layout_marginStart="32dp"
