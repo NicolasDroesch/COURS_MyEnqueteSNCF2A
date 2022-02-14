@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Page1Activity">
+    tools:context=".Page2Activity">
+
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -25,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="45dp"
         android:layout_marginTop="45dp"
-        android:text="Votre avis sur la ponctualitée ?"
+        android:text="Votre avis sur la propreté ?"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
@@ -35,13 +36,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Votre avis sur le service ?"
+        android:text="Votre avis sur l'infromation ?"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/PonctualiGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/propreteGroup" />
 
     <RadioGroup
-        android:id="@+id/PonctualiGroup"
+        android:id="@+id/propreteGroup"
         android:layout_width="300dp"
         android:layout_height="113dp"
         android:layout_marginStart="10dp"
@@ -50,19 +51,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <RadioButton
-            android:id="@+id/Ponctua1"
+            android:id="@+id/propre1"
             android:layout_width="138dp"
             android:layout_height="37dp"
             android:text="Très satisfait" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/propre2"
             android:layout_width="140dp"
             android:layout_height="32dp"
             android:text="Satisfait" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/propre3"
             android:layout_width="141dp"
             android:layout_height="32dp"
             android:text="Non satisfait" />
@@ -70,11 +71,11 @@
     </RadioGroup>
 
     <RadioGroup
-        android:id="@+id/ServiceGroup"
+        android:id="@+id/InformationGroup"
         android:layout_width="296dp"
         android:layout_height="126dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toStartOf="@+id/PonctualiGroup"
+        app:layout_constraintStart_toStartOf="@+id/propreteGroup"
         app:layout_constraintTop_toBottomOf="@+id/textView7">
 
         <RadioButton
@@ -98,12 +99,13 @@
     </RadioGroup>
 
     <Button
-        android:id="@+id/page1_Valider"
+        android:id="@+id/page2_Valider"
         android:layout_width="match_parent"
         android:layout_height="75dp"
         android:text="Suivant"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

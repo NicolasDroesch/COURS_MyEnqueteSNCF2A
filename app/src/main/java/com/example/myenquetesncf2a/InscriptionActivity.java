@@ -74,7 +74,7 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
             unIntent.putExtra("rer", rer);
             unIntent.putExtra("email", email);
 
-            Toast.makeText(this, "Bienvenue " + nom + prenom,Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Bienvenue " + nom + " " + prenom,Toast.LENGTH_LONG).show();
 
             this.startActivity(unIntent);
         }

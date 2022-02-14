@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyEnqueteSNCF2A">
         <activity
+            android:name=".PageFinActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Page2Activity"
+            android:exported="false" />
+        <activity
             android:name=".Page1Activity"
             android:exported="false" />
         <activity
