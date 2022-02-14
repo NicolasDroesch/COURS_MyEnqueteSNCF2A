@@ -9,36 +9,37 @@
     <EditText
         android:id="@+id/name"
         android:layout_width="256dp"
-        android:layout_height="32dp"
+        android:layout_height="45dp"
         android:layout_marginStart="60dp"
         android:ems="10"
         android:inputType="textPersonName"
-        app:layout_constraintStart_toEndOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView"
+        app:layout_constraintStart_toEndOf="@+id/textView" />
 
     <EditText
         android:id="@+id/email"
         android:layout_width="256dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView4"
         app:layout_constraintEnd_toEndOf="@+id/name"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/prenom"
-        app:layout_constraintTop_toBottomOf="@+id/prenom" />
+        app:layout_constraintStart_toStartOf="@+id/prenom" />
 
     <EditText
         android:id="@+id/prenom"
         android:layout_width="256dp"
-        android:layout_height="32dp"
-        android:layout_marginTop="16dp"
+        android:layout_height="45dp"
         android:ems="10"
         android:inputType="textPersonName"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView6"
         app:layout_constraintEnd_toEndOf="@+id/name"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/name"
-        app:layout_constraintTop_toBottomOf="@+id/name" />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/name" />
 
     <ImageButton
         android:id="@+id/imageButton"
@@ -90,7 +91,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="16dp"
         android:text="Email"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"

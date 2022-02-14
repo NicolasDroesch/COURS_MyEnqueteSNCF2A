@@ -2,12 +2,14 @@ package com.example.myenquetesncf2a;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -49,12 +51,32 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
         lesFrequences.add("Annuelle");
         unAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, lesFrequences);
         this.spFrequence.setAdapter(unAdapter);
-
-
     }
 
     @Override
     public void onClick(View v) {
 
+        if(v.getId() == R.id.Valider)
+        {
+            String email = this.txtEmail.getText().toString();
+            String nom = this.txtPrenom.getText().toString();
+            String prenom = this.txtNom.getText().toString();
+
+            String age = this.spAge.getSelectedItem().toString();
+            String frequence = this.spFrequence.getSelectedItem().toString();
+
+            //instanciation de la classe cnadidat a l'enquete
+
+            //passage a la premiere page de l'enquete.
+            Intent unIntent = new Intent(this, Page1Activity.class);
+            String rer = this.getIntent().getStringExtra("rer").toString();
+
+            unIntent.putExtra("rer", rer);
+            unIntent.putExtra("email", email);
+
+            Toast.makeText(this, "Bienvenue " + nom + prenom,Toast.LENGTH_LONG).show();
+
+            this.startActivity(unIntent);
+        }
     }
 }
