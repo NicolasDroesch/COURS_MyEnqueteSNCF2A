@@ -10,9 +10,17 @@ public class Enquete {
         this.lesCandidats = new HashMap<>();
     }
 
-    public void ajouterCandidat(Candidat unCandidat)
+    public boolean ajouterCandidat(Candidat unCandidat)
     {
-        this.lesCandidats.put(unCandidat.getEmail(), unCandidat);
+        if(lesCandidats.containsKey(unCandidat.getEmail()))
+        {
+            return false;
+        }
+        else
+        {
+            this.lesCandidats.put(unCandidat.getEmail(), unCandidat);
+            return true;
+        }
     }
     public Candidat getCandidat(String email)
     {

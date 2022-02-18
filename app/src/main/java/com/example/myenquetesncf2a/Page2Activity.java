@@ -52,7 +52,7 @@ public class Page2Activity extends AppCompatActivity implements View.OnClickList
 
             SNCF.getEnquete(rer).getCandidat(email).ajouterReponse("Service", score );
 
-            Intent unIntent = new Intent(this, PageFinActivity.class);
+            Intent unIntent = new Intent(this, Page3Activity.class);
             unIntent.putExtra("rer", rer);
             unIntent.putExtra("email", email);
 

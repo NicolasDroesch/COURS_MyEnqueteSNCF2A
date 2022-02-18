@@ -82,16 +82,18 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
                 //passage a la premiere page de l'enquete.
                 Intent unIntent = new Intent(this, Page1Activity.class);
                 String rer = this.getIntent().getStringExtra("rer").toString();
-                SNCF.getEnquete(rer).ajouterCandidat(unCandidat);
-                unIntent.putExtra("rer", rer);
-                unIntent.putExtra("email", email);
-
-                Toast.makeText(this, "Bienvenue " + nom + " " + prenom,Toast.LENGTH_LONG).show();
-
-                this.startActivity(unIntent);
+                if(! SNCF.getEnquete(rer).ajouterCandidat(unCandidat))
+                {
+                    Toast.makeText(this, "Candidat a déjà participé", Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    unIntent.putExtra("rer", rer);
+                    unIntent.putExtra("email", email);
+                    Toast.makeText(this, "Bienvenue " + nom + " " + prenom,Toast.LENGTH_LONG).show();
+                    this.startActivity(unIntent);
+                }
             }
-
-
         }
     }
 }
