@@ -34,6 +34,26 @@ public class Page1Activity extends AppCompatActivity implements View.OnClickList
             String email = this.getIntent().getStringExtra("email").toString();
             String rer = this.getIntent().getStringExtra("rer").toString();
 
+            int score = 0;
+            switch (this.rbPonctulite.getCheckedRadioButtonId())
+            {
+                case R.id.ponctualite1 : score = 16; break;
+                case R.id.ponctualite2 : score = 12; break;
+                case R.id.ponctualite3 : score = 8; break;
+            }
+
+            SNCF.getEnquete(rer).getCandidat(email).ajouterReponse("Ponctualite", score );
+
+            score = 0;
+            switch (this.rbService.getCheckedRadioButtonId())
+            {
+                case R.id.service1 : score = 16; break;
+                case R.id.service2 : score = 12; break;
+                case R.id.service3 : score = 8; break;
+            }
+
+            SNCF.getEnquete(rer).getCandidat(email).ajouterReponse("Service", score );
+
             Intent unIntent = new Intent(this, Page2Activity.class);
             unIntent.putExtra("rer", rer);
             unIntent.putExtra("email", email);

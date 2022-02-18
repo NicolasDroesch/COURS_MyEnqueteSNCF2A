@@ -51,19 +51,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2">
 
         <RadioButton
-            android:id="@+id/propre1"
+            android:id="@+id/proprete1"
             android:layout_width="138dp"
             android:layout_height="37dp"
             android:text="Très satisfait" />
 
         <RadioButton
-            android:id="@+id/propre2"
+            android:id="@+id/proprete2"
             android:layout_width="140dp"
             android:layout_height="32dp"
             android:text="Satisfait" />
 
         <RadioButton
-            android:id="@+id/propre3"
+            android:id="@+id/proprete3"
             android:layout_width="141dp"
             android:layout_height="32dp"
             android:text="Non satisfait" />
@@ -79,19 +79,19 @@
         app:layout_constraintTop_toBottomOf="@+id/textView7">
 
         <RadioButton
-            android:id="@+id/radioButton4"
+            android:id="@+id/information1"
             android:layout_width="match_parent"
             android:layout_height="33dp"
             android:text="Très satisfait" />
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/information2"
             android:layout_width="match_parent"
             android:layout_height="33dp"
             android:text="Satisfait" />
 
         <RadioButton
-            android:id="@+id/radioButton6"
+            android:id="@+id/information3"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:text="Non Satisfait" />

@@ -65,12 +65,13 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
             String age = this.spAge.getSelectedItem().toString();
             String frequence = this.spFrequence.getSelectedItem().toString();
 
-            //instanciation de la classe cnadidat a l'enquete
+            //instanciation de la classe Candidat à l'enquete
+            Candidat unCandidat = new Candidat (email, nom, prenom, age, frequence);
 
             //passage a la premiere page de l'enquete.
             Intent unIntent = new Intent(this, Page1Activity.class);
             String rer = this.getIntent().getStringExtra("rer").toString();
-
+            SNCF.getEnquete(rer).ajouterCandidat(unCandidat);
             unIntent.putExtra("rer", rer);
             unIntent.putExtra("email", email);
 
