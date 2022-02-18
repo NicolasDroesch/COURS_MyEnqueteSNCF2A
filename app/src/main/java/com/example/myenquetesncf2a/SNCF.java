@@ -7,25 +7,25 @@ public class SNCF {
 
     public static void initialiser()
     {
-        if(!lesEnquetes.containsKey("rera"))
+        if(!lesEnquetes.containsKey("rerA"))
         {
-            lesEnquetes.put("rera", new Enquete());
+            lesEnquetes.put("rerA", new Enquete());
         }
-        if(!lesEnquetes.containsKey("rerb"))
+        if(!lesEnquetes.containsKey("rerB"))
         {
-            lesEnquetes.put("rerb", new Enquete());
+            lesEnquetes.put("rerB", new Enquete());
         }
-        if(!lesEnquetes.containsKey("rerc"))
+        if(!lesEnquetes.containsKey("rerC"))
         {
-            lesEnquetes.put("rerc", new Enquete());
+            lesEnquetes.put("rerC", new Enquete());
         }
-        if(!lesEnquetes.containsKey("rerd"))
+        if(!lesEnquetes.containsKey("rerD"))
         {
-            lesEnquetes.put("rerd", new Enquete());
+            lesEnquetes.put("rerD", new Enquete());
         }
-        if(!lesEnquetes.containsKey("rere"))
+        if(!lesEnquetes.containsKey("rerE"))
         {
-            lesEnquetes.put("rere", new Enquete());
+            lesEnquetes.put("rerE", new Enquete());
         }
     }
 

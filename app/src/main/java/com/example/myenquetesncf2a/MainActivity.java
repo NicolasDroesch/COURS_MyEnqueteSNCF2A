@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         //on page a la page suivante en envoyant le rer
         Intent unIntent = new Intent(this, InscriptionActivity.class);
-
+        SNCF.initialiser();
         unIntent.putExtra("rer", rer);
         this.startActivity(unIntent);
     }

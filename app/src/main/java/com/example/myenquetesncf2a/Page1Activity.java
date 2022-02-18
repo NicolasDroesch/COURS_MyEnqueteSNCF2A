@@ -58,7 +58,6 @@ public class Page1Activity extends AppCompatActivity implements View.OnClickList
             unIntent.putExtra("rer", rer);
             unIntent.putExtra("email", email);
 
-            Toast.makeText(this, "Bravo sale pute",Toast.LENGTH_SHORT).show();
             this.startActivity(unIntent);
         }
 

@@ -16,7 +16,7 @@ import org.w3c.dom.Text;
 public class PageFinActivity extends AppCompatActivity implements View.OnClickListener {
 
     private Button btFin;
-    private ImageView imgSimple;
+    private ImageView imgSmiley;
     private TextView tvResultat;
     private ListView lvList;
 
@@ -26,11 +26,33 @@ public class PageFinActivity extends AppCompatActivity implements View.OnClickLi
         setContentView(R.layout.activity_page_fin);
 
         this.btFin = (Button) findViewById(R.id.Fin);
-        this.imgSimple = (ImageView) findViewById(R.id.monImageDeFin);
+        this.imgSmiley = (ImageView) findViewById(R.id.monImageDeFin);
         this.tvResultat = (TextView) findViewById(R.id.resultat);
         this.lvList = (ListView) findViewById(R.id.maList);
 
         this.btFin.setOnClickListener(this);
+
+        String rer = this.getIntent().getStringExtra("rer").toString();
+        String email = this.getIntent().getStringExtra("email").toString();
+
+        float moyenne = SNCF.getEnquete(rer).getCandidat(email).moyenneScore();
+        String nom = SNCF.getEnquete(rer).getCandidat(email).getNom();
+        String prenom = SNCF.getEnquete(rer).getCandidat(email).getPrenom();
+
+        this.tvResultat.setText("Résultat Enquete de M./Mme " + nom + " " + prenom);
+
+        if(moyenne < 10)
+        {
+            this.imgSmiley.setImageResource(R.drawable.smiley_3);
+        }
+        else if(moyenne < 14)
+        {
+            this.imgSmiley.setImageResource(R.drawable.smiley_2);
+        }
+        else
+        {
+            this.imgSmiley.setImageResource(R.drawable.smiley_1);
+        }
     }
 
 
