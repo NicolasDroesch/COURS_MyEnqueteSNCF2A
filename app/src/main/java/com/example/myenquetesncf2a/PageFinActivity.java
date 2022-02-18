@@ -20,7 +20,6 @@ public class PageFinActivity extends AppCompatActivity implements View.OnClickLi
     private TextView tvResultat;
     private ListView lvList;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +42,5 @@ public class PageFinActivity extends AppCompatActivity implements View.OnClickLi
             Toast.makeText(this, "Merci d'avoir participé a l'enquête", Toast.LENGTH_LONG).show();
             this.startActivity(unIntent);
         }
-
     }
 }
