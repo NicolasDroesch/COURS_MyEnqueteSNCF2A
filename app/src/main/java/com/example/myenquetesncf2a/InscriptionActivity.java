@@ -65,19 +65,33 @@ public class InscriptionActivity extends AppCompatActivity implements View.OnCli
             String age = this.spAge.getSelectedItem().toString();
             String frequence = this.spFrequence.getSelectedItem().toString();
 
-            //instanciation de la classe Candidat à l'enquete
-            Candidat unCandidat = new Candidat (email, nom, prenom, age, frequence);
+            if(nom.equals("")){
+                Toast.makeText(this, "Veuillez saisir le nom du candidat", Toast.LENGTH_LONG).show();
+            }
+            if(prenom.equals("")){
+                Toast.makeText(this, "Veuillez saisir le prenom du candidat", Toast.LENGTH_LONG).show();
+            }
+            if(email.equals("")){
+                Toast.makeText(this, "Veuillez saisir l'email du candidat", Toast.LENGTH_LONG).show();
+            }
+            if(!nom.equals("") && !prenom.equals("") && !email.equals(""))
+            {
+                //instanciation de la classe Candidat à l'enquete
+                Candidat unCandidat = new Candidat (email, nom, prenom, age, frequence);
 
-            //passage a la premiere page de l'enquete.
-            Intent unIntent = new Intent(this, Page1Activity.class);
-            String rer = this.getIntent().getStringExtra("rer").toString();
-            SNCF.getEnquete(rer).ajouterCandidat(unCandidat);
-            unIntent.putExtra("rer", rer);
-            unIntent.putExtra("email", email);
+                //passage a la premiere page de l'enquete.
+                Intent unIntent = new Intent(this, Page1Activity.class);
+                String rer = this.getIntent().getStringExtra("rer").toString();
+                SNCF.getEnquete(rer).ajouterCandidat(unCandidat);
+                unIntent.putExtra("rer", rer);
+                unIntent.putExtra("email", email);
 
-            Toast.makeText(this, "Bienvenue " + nom + " " + prenom,Toast.LENGTH_LONG).show();
+                Toast.makeText(this, "Bienvenue " + nom + " " + prenom,Toast.LENGTH_LONG).show();
 
-            this.startActivity(unIntent);
+                this.startActivity(unIntent);
+            }
+
+
         }
     }
 }

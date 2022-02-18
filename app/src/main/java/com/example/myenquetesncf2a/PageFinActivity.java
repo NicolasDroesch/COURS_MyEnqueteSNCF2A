@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ListView;
@@ -12,6 +13,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.w3c.dom.Text;
+
+import java.util.ArrayList;
 
 public class PageFinActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -53,6 +56,16 @@ public class PageFinActivity extends AppCompatActivity implements View.OnClickLi
         {
             this.imgSmiley.setImageResource(R.drawable.smiley_1);
         }
+
+        ArrayList<String> lesResultats = new ArrayList<>();
+        for (Candidat unCandidat : SNCF.getEnquete(rer).getLesCandidats().values())
+        {
+            lesResultats.add(unCandidat.getNom() + " " +
+                    unCandidat.getPrenom() + " " +
+                    unCandidat.moyenneScore());
+        }
+        ArrayAdapter unAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, lesResultats);
+        this.lvList.setAdapter(unAdapter);
     }
 
 

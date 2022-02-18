@@ -18,4 +18,13 @@ public class Enquete {
     {
         return this.lesCandidats.get(email);
     }
+
+    public HashMap<String, Candidat> getLesCandidats() {
+        return lesCandidats;
+    }
+
+    public void setLesCandidats(HashMap<String, Candidat> lesCandidats) {
+        this.lesCandidats = lesCandidats;
+    }
+
 }
